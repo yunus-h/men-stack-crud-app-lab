@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit</title>
+</head>
+<body>
+    <nav>
+        <a href="/blogs">Go back to the Blog list</a>
+    </nav>
+    <h1>Blog Edit</h1>
+
+    <form id="editForm" action="/blogs/<%= blog._id%>?_method=PUT" method="POST"> 
+        <div>
+            <label for="title">Title*: </label>
+            <input type="text" name="title" id="title" value="<%= blog.title %>" required>
+        </div>
+        <br>
+        <div>
+            <label for="topic">Topic*: </label>
+            <input type="text" name="topic" id="topic" value= "<%= blog.topic %>" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="content">Content*: </label>
+            <textarea name="content" id="content" rows="30" cols="40" required>
+                <%= blog.content %>
+            </textarea>
+        </div>
+        <br>
+
+        <div>
+            <label for="Author">Author: </label>
+            <br>
+            <label for="authorFirstName">First Name: </label>
+            <input type="text" name="authorFirstName" id="authorFirstName" value=<%= blog.authorFirstName %>>
+        </div>
+        <div>
+            <label for="authorLastName">Last Name: </label>
+            <input type="text" name="authorLastName" id="authorLastName" value= <%= blog.authorLastName %>>
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" value=<%= blog.email %>>
+        </div>
+        <div>
+            <label for="phone">Phone: </label>
+            <input type="number" name="phone" id="phone" value = <%= blog.phone %>>
+        </div>
+        <br>
+
+
+        <div>
+            <button type="submit">Update this Blog</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My blog</title>
+  </head>
+  <body>
+    <h1>Welcome to my blog</h1>
+    <h2>An app for collecting your writings about everything</h2>
+    <nav>
+        <a href="/blogs/new">Create a blog</a>
+    </nav>
+    <h3>Posted blog: </h3>
+    <ul>
+        <% allBlogs.forEach(blog => { %>
+          <li><a href="blogs/<%=blog._id %>"</a><%= blog.topic %> - <%= blog.title %></li>
+        <% }); %>
+      </ul>
+  </body>
+</html>

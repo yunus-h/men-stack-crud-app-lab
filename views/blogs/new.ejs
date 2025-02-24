@@ -1,0 +1,70 @@
+<!-- create a new blog form -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New blog</title>
+  </head>
+
+  <body>
+    <nav>
+        <a href="/blogs">Back to the blog list</a>
+    </nav>
+    <h1>Create a New Blog!</h1>
+
+    <form id="newForm" action="/" method="POST"> 
+        <!-- enctype="multipart/form-data" -->
+        <div>
+            <label for="title">Title*: </label>
+            <input type="text" name="title" id="title" placeholder="your blog title" required>
+        </div>
+        <br>
+        <div>
+            <label for="topic">Topic*: </label>
+            <input type="text" name="topic" id="topic" placeholder="your blog topic" required>
+        </div>
+        <br>
+
+        <div>
+            <label for="content">Content*: </label>
+            <textarea name="content" id="content" rows="30" cols="40" placeholder="write your blog here..." required></textarea>
+        </div>
+        <br>
+
+        <div>
+            <label for="Author">Author: </label>
+            <br>
+            <label for="authorFirstName">First Name: </label>
+            <input type="text" name="authorFirstName" id="authorFirstName" placeholder="your first name">
+        </div>
+        <div>
+            <label for="authorLastName">Last Name: </label>
+            <input type="text" name="authorLastName" id="authorLastName" placeholder="your last name">
+        </div>
+        <div>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" placeholder="your email">
+        </div>
+        <div>
+            <label for="phone">Phone: </label>
+            <input type="number" name="phone" id="phone" placeholder="your phone number">
+        </div>
+        <br>
+
+        <!-- <div>
+            <label for="image">Picture: </label>
+            <input type="file" name="image" id="image" accept="image/*">
+        </div>
+        <br> -->
+
+        <div>
+            <button type="submit">Submit This Blog</button>
+            <button type="reset">Reset</button>
+        </div>
+
+    </form>
+  </body>
+
+</html>
